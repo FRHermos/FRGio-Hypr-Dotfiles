@@ -1,7 +1,5 @@
 #!/bin/bash
 
-curl -s 'https://liquorix.net/install-liquorix.sh' | sudo bash
-
 echo "Updating system..."
 sudo pacman -Syu --noconfirm
 
@@ -20,18 +18,18 @@ fi
 
 # Define package categories
 pacman_packages=(
-  firefox neovim discord telegram-desktop obsidian sof-firmware cups pipewire 
-  hyprland ly kitty waybar swaync hyprpaper
-  xdg-desktop-portal-hyprland wl-clipboard hyprlock udiskie 
-  nwg-look nautilus blueberry
-  pavucontrol nm-connection-editor htop power-profiles-daemon
-  adw-gtk-theme ttf-jetbrains-mono awesome-terminal-fonts
+firefox neovim discord telegram-desktop obsidian sof-firmware cups pipewire alsa-utils pulseaudio
+hyprland ly kitty waybar swaync hyprpaper 
+xdg-desktop-portal-hyprland wl-clipboard hyprlock udiskie 
+nwg-look nautilus blueberry 
+pavucontrol nm-connection-editor htop power-profiles-daemon 
+adw-gtk-theme ttf-jetbrains-mono awesome-terminal-fonts 
 )
 
 aur_packages=(
-  github-desktop-bin betterdiscord-installer
-  rofi-lbonn-wayland-git rofi-calc rofi-emoji
-  xwaylandvideobridge waypaper hyrpsunset wlogout python-pywal16 bibata-cursot-theme
+github-desktop-bin betterdiscord-installer 
+rofi-lbonn-wayland-git rofi-calc rofi-emoji 
+xwaylandvideobridge waypaper hyrpsunset wlogout python-pywal16 bibata-cursor-theme ttf-font-awesome 
 )
 
 echo "Installing packages from official repos..."
