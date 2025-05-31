@@ -1,4 +1,4 @@
-@import "/home/mat/.cache/wal/colors-waybar.css";
+@import "/home/fvrz/.cache/wal/colors-waybar.css";
 /* Replace the path with your USERNAME */
 
 * {
@@ -13,14 +13,14 @@ button {
     font-size: 32px;
     background-size: 25%;
     padding-bottom: 125px;
-    margin: 10px;
-    border-radius: 12px;
+    margin: 8px;
+    border-radius: 4px;
     background-color: @background;
-    border: 4px solid @color3;
+    border: 4px solid @color10;
     color: @foreground;
 }
 
 button:focus, button:active, button:hover {
-	background-color: @color9;
+	background-color: @color3;
 	outline-style: none;
 }
