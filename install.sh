@@ -9,6 +9,13 @@ applications=(
   zoom
   github-desktop-bin
   telegram-desktop
+  wps-office
+  ttf-wps-fonts
+  go
+  nodejs
+  luarocks
+  lazygit
+  npm
   discord
 )
 
@@ -33,7 +40,7 @@ additional_packages=(
   cups                  # Printers
   pipewire              # Sound server
   power-profiles-daemon # Power profiles switcher                # Makes moving in terminal much easier
-  yay                   # AUR
+  paru                  # AUR
   python-pywal16        # Color generator
 )
 
@@ -70,6 +77,7 @@ themes=(
 )
 
 terminal_packages=(
+  libtiff5
   fastfetch
 )
 # Update the systemc
@@ -79,7 +87,7 @@ sudo pacman -Sy --noconfirm
 for pkg in "${applications[@]}"; do
   echo "Installing $pkg..."
   if ! pacman -Qq "$pkg" &>/dev/null; then
-    yay -S --noconfirm --needed "$pkg"
+    paru -S --noconfirm --needed "$pkg"
   fi
   echo "$pkg is already installed"
 done
@@ -87,7 +95,7 @@ done
 for pkg in "${default_applications[@]}"; do
   echo "Installing $pkg..."
   if ! pacman -Qq "$pkg" &>/dev/null; then
-    yay -S --noconfirm --needed "$pkg"
+    paru -S --noconfirm --needed "$pkg"
   fi
   echo "$pkg is already installed"
 done
@@ -95,7 +103,7 @@ done
 for pkg in "${additional_packages[@]}"; do
   echo "Installing $pkg..."
   if ! pacman -Qq "$pkg" &>/dev/null; then
-    yay -S --noconfirm --needed "$pkg"
+    paru -S --noconfirm --needed "$pkg"
   fi
   echo "$pkg is already installed"
 done
@@ -103,7 +111,7 @@ done
 for pkg in "${packages[@]}"; do
   echo "Installing $pkg..."
   if ! pacman -Qq "$pkg" &>/dev/null; then
-    yay -S --noconfirm --needed "$pkg"
+    paru -S --noconfirm --needed "$pkg"
   fi
   echo "$pkg is already installed"
 done
@@ -111,7 +119,7 @@ done
 for pkg in "${fonts[@]}"; do
   echo "Installing $pkg..."
   if ! pacman -Qq "$pkg" &>/dev/null; then
-    yay -S --noconfirm --needed "$pkg"
+    paru -S --noconfirm --needed "$pkg"
   fi
   echo "$pkg is already installed"
 done
@@ -119,7 +127,7 @@ done
 for pkg in "${themes[@]}"; do
   echo "Installing $pkg..."
   if ! pacman -Qq "$pkg" &>/dev/null; then
-    yay -S --noconfirm --needed "$pkg"
+    paru -S --noconfirm --needed "$pkg"
   fi
   echo "$pkg is already installed"
 done
@@ -127,7 +135,7 @@ done
 for pkg in "${terminal_packages[@]}"; do
   echo "Installing $pkg..."
   if ! pacman -Qq "$pkg" &>/dev/null; then
-    yay -S --noconfirm --needed "$pkg"
+    paru -S --noconfirm --needed "$pkg"
   fi
   echo "$pkg is already installed"
 done
